@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Cartas Matemático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h1>Desafío Matemático con Cartas</h1>
+        
+        <div id="hud">
+            <p>Nivel: <span id="level">1</span></p>
+            <p>Puntuación: <span id="score">0</span></p>
+            <p>Racha: <span id="streak">0/3</span></p>
+            <p>Tiempo: <span id="timer">30</span></p>
+        </div>
+
+        <div id="game-board">
+            </div>
+
+        <div id="answer-section">
+            <input type="number" id="user-answer" placeholder="Escribe el resultado">
+            <button id="submit-btn">Comprobar</button>
+        </div>
+
+        <p id="feedback"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
