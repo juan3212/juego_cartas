@@ -49,6 +49,7 @@ function actualizarHUD() {
     scoreDisplay.textContent = puntuacion;
     levelDisplay.textContent = nivel;
     rachaDisplay.textContent = `${rachaCorrectas}/${rachaNecesaria}`;
+    console.log(`Racha actual: ${rachaCorrectas}/${rachaNecesaria}`);
 
     // Dibuja los corazones
     livesContainer.innerHTML = '';
