@@ -119,3 +119,29 @@ body {
 .hidden {
     display: none !important;
 }
+
+@media (max-width: 600px) {
+    #hud {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center;  /* Centra los elementos apilados */
+        gap: 10px;             /* Añade espacio vertical entre elementos */
+    }
+
+    #game-container {
+        padding: 15px; /* Reduce un poco el padding en pantallas pequeñas */
+    }
+
+    .card-image {
+        width: 60px; /* Reduce ligeramente el tamaño de las cartas */
+    }
+    
+    .operator {
+        font-size: 2em; /* Reduce el tamaño de los operadores */
+    }
+
+    #answer-section {
+        display: flex;
+        flex-direction: column; /* Apila el input y el botón */
+        gap: 10px;
+    }
+}
