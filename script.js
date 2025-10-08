@@ -175,7 +175,7 @@ function comprobarRespuesta() {
         }
     }
     
-    const rachaNecesaria = nivel === 1 ? 3 : 5;
+    const rachaNecesaria = nivel === 3;
     if (rachaCorrectas >= rachaNecesaria) {
         nivel++;
         rachaCorrectas = 0;
