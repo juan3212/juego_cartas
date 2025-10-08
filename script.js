@@ -13,6 +13,7 @@ let cartasUsadas;
 // Variables del cronómetro
 let timerInterval;
 let tiempoRestante = 30;
+const rachaNecesaria = 3; // Cambiado a 3 para subir de nivel cada 3 respuestas correctas
 
 // Elementos del DOM
 const levelDisplay = document.getElementById('level');
@@ -26,6 +27,7 @@ const feedbackDisplay = document.getElementById('feedback');
 const gameOverScreen = document.getElementById('game-over-screen');
 const finalScoreDisplay = document.getElementById('final-score');
 const restartBtn = document.getElementById('restart-btn');
+const rachaDisplay = document.getElementById('streak');
 
 // --- LÓGICA DEL JUEGO ---
 
@@ -46,7 +48,8 @@ function iniciarJuego() {
 function actualizarHUD() {
     scoreDisplay.textContent = puntuacion;
     levelDisplay.textContent = nivel;
-    
+    rachaDisplay.textContent = `${rachaCorrectas}/${rachaNecesaria}`;
+
     // Dibuja los corazones
     livesContainer.innerHTML = '';
     for (let i = 0; i < vidas; i++) {
@@ -175,7 +178,6 @@ function comprobarRespuesta() {
         }
     }
     
-    const rachaNecesaria = nivel === 3;
     if (rachaCorrectas >= rachaNecesaria) {
         nivel++;
         rachaCorrectas = 0;
