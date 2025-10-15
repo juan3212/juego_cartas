@@ -9,6 +9,18 @@ body {
     margin: 0;
 }
 
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#header img {
+    width: 50px;
+    margin-right: 10px;
+}
+
 #game-container {
     background-color: #1565c0;
     padding: 20px;
