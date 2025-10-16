@@ -1,44 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Cartas Matemático</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Juego de Cartas Matemático</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="game-container">
+            <div id="header">
+                <img src="img/logo.png" alt="logo" srcset="" />
+                <h1>Maratón Matemática</h1>
+            </div>
+            <div id="hud">
+                <div>Nivel: <span id="level">1</span></div>
+                <div>Puntuación: <span id="score">0</span></div>
+                <div>Racha: <span id="streak">0/3</span></div>
+                <div id="lives-container" hidden></div>
 
-    <div id="game-container">
-        <div id="header">
-            <img src="img/logo.png" alt="logo" srcset="">
-            <h1>Maratón  Matemática</h1>
-        </div>
-        <div id="hud">
-            <div>Nivel: <span id="level">1</span></div>
-            <div>Puntuación: <span id="score">0</span></div>
-            <div>Racha: <span id="streak">0/3</span></div>
-            <div id="lives-container">
-                </div>
-            <div>Tiempo: <span id="timer">30</span></div>
-        </div>
-
-        <div id="game-board">
+                <div>Tiempo: <span id="timer">30</span></div>
             </div>
 
-        <div id="answer-section">
-            <input type="number" id="user-answer" placeholder="Escribe el resultado">
-            <button id="submit-btn">Comprobar</button>
+            <div id="game-board"></div>
+
+            <div id="answer-section">
+                <input
+                    type="number"
+                    id="user-answer"
+                    placeholder="Escribe el resultado"
+                />
+                <button id="submit-btn">Comprobar</button>
+            </div>
+
+            <p id="feedback"></p>
+
+            <p>Lic. Brayan Stiven Prieto Velasquez</p>
+
+            <div id="game-over-screen" class="hidden">
+                <h2>Fin del Juego</h2>
+                <p>Puntuación Final: <span id="final-score"></span></p>
+                <button id="restart-btn">Jugar de Nuevo</button>
+            </div>
         </div>
 
-        <p id="feedback"></p>
-        
-        <div id="game-over-screen" class="hidden">
-            <h2>Fin del Juego</h2>
-            <p>Puntuación Final: <span id="final-score"></span></p>
-            <button id="restart-btn">Jugar de Nuevo</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
