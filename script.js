@@ -12,7 +12,7 @@ let cartasUsadas;
 
 // Variables del cronómetro
 let timerInterval;
-let tiempoRestante = 30;
+let tiempoRestante = 45;
 const rachaNecesaria = 3; // Cambiado a 3 para subir de nivel cada 3 respuestas correctas
 
 // Elementos del DOM
@@ -185,7 +185,7 @@ function comprobarRespuesta() {
 
     if (vidas <= 0) {
       actualizarHUD();
-      setTimeout(finDelJuego, 1000);
+      setTimeout(finDelJuego, 4000);
       return;
     }
   }
@@ -198,12 +198,12 @@ function comprobarRespuesta() {
   }
 
   actualizarHUD();
-  setTimeout(generarPregunta, 1500);
+  setTimeout(generarPregunta, 3000);
 }
 
 // --- CRONÓMETRO ---
 function iniciarCronometro() {
-  tiempoRestante = 30;
+  tiempoRestante = 45;
   timerDisplay.textContent = tiempoRestante;
   timerDisplay.classList.remove("low-time");
   clearInterval(timerInterval);
@@ -228,12 +228,12 @@ function tiempoAgotado() {
 
   if (vidas <= 0) {
     actualizarHUD();
-    setTimeout(finDelJuego, 1000);
+    setTimeout(finDelJuego, 4000);
     return;
   }
 
   actualizarHUD();
-  setTimeout(generarPregunta, 2000);
+  setTimeout(generarPregunta, 4000);
 }
 
 // --- EVENTOS Y ARRANQUE ---
